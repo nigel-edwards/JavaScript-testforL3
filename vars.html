@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Testing of vars</title> 
+    <script>
+        function setCookie()
+        {
+            document.cookie = "username=Nigel Edwards; SameSite=Strict"; 
+        }
+
+        function readCookie(oid)
+        {
+            var c = decodeURIComponent(document.cookie);
+            document.getElementById(oid).innerHTML = c;
+        }
+    </script>   
+</head>
+
+<body>
+    <h1>Output Data</h1>
+    <div id="dataout"></div>
+
+    <button onclick="setCookie();">Set</button>
+    <button onclick="readCookie('cdata');">Get</button>
+    <p id="cdata"></p>
+</body>
+
+</html>
